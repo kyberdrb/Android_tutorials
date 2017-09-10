@@ -15,7 +15,7 @@
 - Click on "Device Mode" red rectangle. After a while it will enable the TTS.
 ![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/7.png)
 ![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/8.png)
-- Copy any text. The Chrome Reader start to read aloud as soon as you click on "Copy"
+- Copy any text. The Chrome Reader start to read it aloud as soon as you click on "Copy"
 ![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/9.png)
 - Enjoy
 
@@ -25,4 +25,4 @@
 # Disable TTS:
 - Open "Chrome Reader"
 - Click on "Device Mode" red rectangle
-- After a while you will a toast will appear that TTS is disabled
+- After a while the Chrome Reader TTS will be disabled
