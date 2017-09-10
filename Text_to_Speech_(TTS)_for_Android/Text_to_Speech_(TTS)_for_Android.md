@@ -6,7 +6,7 @@
 - Go to Android settings -> Accessibility
 ![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/1.png)
 ![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/2.png)
-- Enable "Select to Speak"
+- Enable "Select to Speak" (Chrome Reader won't work without it enabled!)
 ![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/3.png)
 ![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/4.png)
 - Enable "Chrome Reader"
