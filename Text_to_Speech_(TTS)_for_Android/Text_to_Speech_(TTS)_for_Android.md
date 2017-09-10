@@ -4,7 +4,8 @@
 - Download and install [Device Reader Mode](https://m.allfreeapk.com/device-reader-mode,1451935/). Or use [direct link](https://m.allfreeapk.com/device-reader-mode,1451935/download.html)
 -Make sure "Google TTS" is installed and enabled in "Language and keyboard" settings
 - Go to Android settings -> Accessibility
-![Img1](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/1.png)
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/1.png)
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/1.png)
 - Enable this
 - Enable that ...
 - Click on "Device Mode" red rectangle. After a while it will enable the TTS.
