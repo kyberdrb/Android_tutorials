@@ -5,11 +5,18 @@
 -Make sure "Google TTS" is installed and enabled in "Language and keyboard" settings
 - Go to Android settings -> Accessibility
 ![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/1.png)
-![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/1.png)
-- Enable this
-- Enable that ...
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/2.png)
+- Enable "Select to Speak"
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/3.png)
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/4.png)
+- Enable "Chrome Reader"
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/5.png)
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/6.png)
 - Click on "Device Mode" red rectangle. After a while it will enable the TTS.
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/7.png)
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/8.png)
 - Copy any text. The Chrome Reader start to read aloud as soon as you click on "Copy"
+![](https://github.com/kyberdrb/Android_tutorials/raw/master/Text_to_Speech_(TTS)_for_Android/pics/9.png)
 - Enjoy
 
 # Stop reading text aloud:
