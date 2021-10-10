@@ -4,13 +4,21 @@
 
 Both scripts use a backup directory to save and restore android packages
 
+Examples
+
 Backup
 
-    backup_apps_with_data.sh /home/laptop/backup-lenovo_a5000/apps_and_data
+  ./backup_apps.sh ~/backup-samsung_j3/apps_and_data/
+  ./backup_apps.sh ~/backup-samsung_j3/apps_and_data/ --with-data
 
-Restore
+Backup check: `ls ~/backup-samsung_j3/apps_and_data/`
 
-    restore_apps_with_data.sh /home/laptop/backup-lenovo_a5000/apps_and_data
+Restore (Not tested)
+
+  ./restore_apps.sh ~/backup-samsung_j3/apps_and_data/
+  ./restore_apps.sh ~/backup-samsung_j3/apps_and_data/ --with-data
+
+Data recovery doesn't work even on either of my phones even with the same firmware, therefore I made data backup and restoration optional. Maybe it will proove useful to someone
 
 # Sources
 

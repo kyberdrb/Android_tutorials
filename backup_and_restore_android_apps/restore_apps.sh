@@ -1,8 +1,10 @@
 #!/bin/sh
 
-DESTINATION_DIR="$1"
+APPS_DIR="$1"
 
-cd ${DESTINATION_DIR}
+RESTORE_WITH_DATA="$2"
+
+cd "${APPS_DIR}"
 
 adb shell settings put global verifier_verify_adb_installs 0
 
@@ -15,8 +17,10 @@ do
   adb uninstall "${package_name}"
   adb install "${package_file}"
   
-  # TODO make data restoration optional, but disabled by default, for speed of the backup and to prevent app crashes
-  #adb restore "${package_name}.data"
+  if [ "${RESTORE_WITH_DATA}" = "--with-data" ]
+  then 
+    adb restore "${package_name}.data"
+  fi
   
   echo
   echo "----------------------------------------------------------"
