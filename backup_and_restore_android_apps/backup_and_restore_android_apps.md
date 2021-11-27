@@ -36,7 +36,8 @@ Data recovery doesn't work even on either of my phones even with the same firmwa
 
 # Sources
 
-- https://gist.github.com/AnatomicJC/e773dd55ae60ab0b2d6dd2351eb977c1
+- https://gist.github.com/kyberdrb/e7e35666385145b9362cef88c59b9174
+  - forked from https://gist.github.com/AnatomicJC/e773dd55ae60ab0b2d6dd2351eb977c1
 - https://stackoverflow.com/questions/15014519/apk-installation-failed-install-failed-verification-failure/34666037#34666037
 - https://stackoverflow.com/questions/34951901/percent-symbol-in-bash-whats-it-used-for/34952009#34952009
 - https://androidfilebox.com/tips/how-to-backup-phone-data-without-root-and-unlocking-bootloader/
