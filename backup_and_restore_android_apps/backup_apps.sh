@@ -15,11 +15,14 @@ do
   apk_package_name="$(echo "${app}" | sed "s/^package://" | sed "s/=/ /" | cut -d' ' -f2 | tr -d '\r')"
   
   destination_apk_package_name="${apk_package_name}".apk
+  
+  apk_package_source_path=$(echo ${apk_package_file%=*})
 
   echo "apk package file: ${apk_package_file}"
   echo "destination apk package name: ${destination_apk_package_name}"
   echo "destination data name for package: ${destination_data_name_for_package}"
   echo "apk package name: ${apk_package_name}"
+  echo "apk package source path: ${apk_package_source_path}"
 
   adb pull "${apk_package_file}" "${destination_apk_package_name}"
 
