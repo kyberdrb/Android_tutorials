@@ -1,5 +1,19 @@
  Backup and Restore Android Apps
 
+# Transferring one app from phone to phone
+
+1. Select the app for backup
+
+    for app in $(adb shell pm list packages -f -3); do   apk_package_file="$(echo "${app}" | sed "s/^package://" | tr -d '\r')";   echo $apk_package_file; echo ${apk_package_file%=*}; echo; done
+
+1. Backup the app to computer
+
+    adb pull /data/app/com.arlosoft.macrodroid-0h0opGGy9SzJAWEpu7pQtw==/base.apk /home/laptop/Downloads/MacroDroid-5.19.11.apk
+
+1. Copy the app from computer to other (Android) device
+
+    adb push /home/laptop/Downloads/MacroDroid-5.19.11.apk /storage/extSdCard/Download/
+
 # Usage
 
 Both scripts use a backup directory to save and restore android packages
