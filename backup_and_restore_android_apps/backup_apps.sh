@@ -15,13 +15,29 @@ do
   package_file_absolute_path_without_extension=$(echo ${package_info%\.apk=*})
   package_file_absolute_path_with_extension="${package_file_absolute_path_without_extension}.apk"
 
-  package_name="$(echo "${app}" | sed "s/^package://" | sed "s/=/ /g" | cut -d' ' -f4 | tr -d '\r')"
+  package_name="$(echo ${package_info##*=} | tr -d '\r')"
 
   echo "package info: ${package_info}"
   echo "package file absolute path with extension: ${package_file_absolute_path_with_extension}"
   echo "apk package name: ${package_name}"
 
-  adb pull "${package_file_absolute_path_with_extension}" "${package_name}"
+  adb pull "${package_file_absolute_path_with_extension}" "${package_name}.apk"
+
+  if [ "$?" -ne 0 ]
+  then
+    echo "Standard backup procedure failed"
+    echo "Trying alternative procedure..."
+
+    # Found intersecting match between Samsung Galaxy J3 and Sony Xperia XA1 in directories for internal storage:
+    # - adb shell ls /mnt/sdcard/
+    # - adb shell ls /sdcard/
+    # - adb shell ls /storage/sdcard0/
+    # I chose the '/sdcard/' path for internal storage, because it was the shortest
+
+    adb shell cp ${package_file_absolute_path_with_extension} "/sdcard/${package_name}.apk"
+    adb pull "/sdcard/${package_name}.apk" .
+    adb shell rm "/sdcard/${package_name}.apk"
+  fi
 
   #echo "destination data name for package: ${destination_data_name_for_package}"
 
