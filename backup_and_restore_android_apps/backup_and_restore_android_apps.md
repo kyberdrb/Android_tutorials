@@ -45,3 +45,4 @@ Data recovery doesn't work even on either of my phones even with the same firmwa
 - https://stackpointer.io/mobile/android-adb-list-installed-package-names/416/
 - https://stackoverflow.com/questions/53289998/adb-backup-location-of-the-resulting-file/53297973#53297973
 - https://stackoverflow.com/questions/24219287/adb-pull-file-in-a-specific-folder-of-pc/24219661#24219661
+- https://www.gnu.org/software/libc/manual/html_node/Variable-Substitution.html
