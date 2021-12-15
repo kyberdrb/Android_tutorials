@@ -2,6 +2,16 @@
 
 Tutorials for Android
 
+## Copy file between the phone and the computer
+
+phone `->` PC
+
+    adb pull /storage/extSdCard/buffer.txt /tmp/buffer.txt
+    
+PC `->` phone
+    
+    adb push /tmp/buffer.txt /storage/extSdCard/buffer.txt
+
 ## Backup entire phone through ADB recursively
 
     # Sony Xperia XA1 - internal storage
