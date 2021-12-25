@@ -4,6 +4,9 @@ Tutorials for Android
 
 ## Copy file between the phone and the computer
 
+Limitations of MTP storage - can't modify files in place - in the MTP storage directly  
+Source: Can't write text file to android sd card through mtp protocol - https://forums.linuxmint.com/viewtopic.php?p=1369918#p1369918
+
 - phone `->` PC
 
     - copy file
