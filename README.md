@@ -4,13 +4,34 @@ Tutorials for Android
 
 ## Copy file between the phone and the computer
 
-phone `->` PC
+- phone `->` PC
 
-    adb pull /storage/extSdCard/buffer.txt /tmp/buffer.txt
-    
-PC `->` phone
-    
+    - copy file
+
+            adb pull /storage/extSdCard/buffer.txt /tmp/buffer.txt
+
+    - copy multiple files using a wildcard from phone to PC
+
+            adb shell "ls /storage/extSdCard/DCIM/Camera/20211224_0*" | tr -d '\r' | xargs -n1 adb pull
+
+        or
+
+            adb shell "ls /storage/extSdCard/DCIM/Camera/20211224_0*" | tr '\r' ' ' | xargs -n1 adb pull
+
+        - Sources:
+            - https://stackoverflow.com/questions/11074671/adb-pull-multiple-files/11250068#11250068
+            - https://stackoverflow.com/questions/11074671/adb-pull-multiple-files/37122195#37122195
+
+    - copy a directory recursively, i.e. with all files in the subdirectories
+
+            adb pull /storage/sdcard0/Locus/mapsVector/europe/. .
+
+        Source: https://android.stackexchange.com/questions/87326/recursive-adb-pull/87327#87327
+
+-PC `->` phone
+
     adb push /tmp/buffer.txt /storage/extSdCard/buffer.txt
+    adb push Locus/. /storage/sdcard0/
 
 ## Backup entire phone through ADB recursively
 
