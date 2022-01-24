@@ -6,6 +6,8 @@ BACKUP_WITH_DATA="$2"
 
 cd "${DESTINATION_DIR}"
 
+adb devices
+
 # 'cmd' for 'adb shell' is unsupported for Samsung Galaxy J3 Dual SIM 2016 (Android 5.0.0 - Marshmallow); using 'pm' instead
 #for app in $(adb shell cmd package list packages -f -3)
 
