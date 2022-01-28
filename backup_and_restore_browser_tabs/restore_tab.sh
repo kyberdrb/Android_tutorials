@@ -38,4 +38,7 @@ adb shell input touchscreen swipe 360 110 360 2000 2000
 
 # README.md
 #Sources
-#- 
+#- https://unix.stackexchange.com/questions/7011/how-to-loop-over-the-lines-of-a-file/670789#670789
+#- https://developer.android.com/reference/android/view/KeyEvent
+#- https://stackoverflow.com/questions/7789826/adb-shell-input-events
+#- https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490982(v=technet.10)?redirectedfrom=MSDN
