@@ -61,3 +61,36 @@ Source: https://android.stackexchange.com/questions/87326/recursive-adb-pull/873
 
 Source: https://www.infopackets.com/news/10334/how-use-firewall-block-full-screen-ads-android
 
+## Speed up Android
+
+- LagFix Game Booster - (fstrim) Trimmer
+  - no root
+- Greenify
+- Droid Optimitzer
+
+Maybe DNS Changer, for faster internet browsing, but I already use NetGuard to block ads in my Android apps and I'm not sure I'm willing to switch back and forth to disable NetGuard, enable DNS Changer when browsing Internet, and then enable NetGuard, disable DNS Changer to do everything else.
+
+Sources:
+
+- https://cybergeekin.blogspot.com/2015/04/why-do-android-phones-lag-rootnon.html
+- https://duckduckgo.com/?q=lagfix+no+root&ia=web
+- https://forum.xda-developers.com/search/36173701/?q=lagfix&o=relevance
+- https://duckduckgo.com/?q=best+game+booster+apps+android&ia=web
+- https://techigem.com/game-booster-apps/
+- https://duckduckgo.com/?q=dns+server+list+benchmark&ia=web
+- https://www.serverwatch.com/server-reviews/dns-benchmark-tools/
+- https://www.dnsperf.com/#!dns-providers,Europe
+- https://duckduckgo.com/?q=Sectigo+dns+ips&ia=web
+- https://public-dns.info/nameserver/sk.html
+- https://duckduckgo.com/?q=Exoscale+DNS+ip&ia=web
+- http://www.dnscheck.pro/exoscale.com
+  - United States ns1.exoscale.ch. → 162.159.25.4
+  - United States ns1.exoscale.com. → 162.159.27.4
+  - United States ns1.exoscale.io. → 162.159.24.4
+  - United States ns1.exoscale.net. → 162.159.26.4
+- https://ns.tools/exoscale.ch
+- https://dnslytics.com/ip/185.19.31.244
+  - ns2.exoscale.net → 185.19.31.244
+- https://www.grc.com/dns/benchmark.htm
+- https://play.google.com/store/apps/details?id=com.burakgon.dnschanger&hl=en_US&gl=US
+
