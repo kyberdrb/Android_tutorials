@@ -31,15 +31,37 @@ do
     "first_and_last_url_were_matching_only_in_first_iteration=${first_and_last_url_were_matching_only_in_first_iteration}" \
     "last_and_forelast_url_are_different=${last_and_forelast_url_are_different}"
 
-  adb shell am start -W com.vivaldi.browser/com.google.android.apps.chrome.Main
+  # The name of the web browser intents and its Main activity had been detected with commands
+  #     adb logcat > logcat.log
+  #     less logcat.log
+  #     Press '/' (forward slash) to enable searching
+  #     Enter 'vivaldi'
+  #     Press 'n' for next result (or 'Shift + N' for previous result) to find the starting of the Main Activity/main Intent of the web browser, e.g.
+  #
+  #         updateVisibility : ActivityRecord{18077dd token=android.os.BinderProxy@218a8f02 {com.vivaldi.browser/com.google.android.apps.chrome.Main}} show : false
+  #
+  #     press 'q' to exit
+  
+  # Main Activity for Vivaldi browser
+  browser_main_activity="com.vivaldi.browser/com.google.android.apps.chrome.Main"
+  
+  # Main Activity for Brave browser
+  #browser_main_activity="com.brave.browser/com.google.android.apps.chrome.Main"
+
+  adb shell am start -W ${browser_main_activity}
+
   sleep 3
   
+  # mark URL in address bar
   adb shell input touchscreen swipe 360 130 360 130 3000
   sleep 3
   
-  adb shell input touchscreen tap 565 325
-  sleep 3
+  # hide the text editing context menu
   adb shell input keyevent KEYCODE_BACK
+  sleep 3
+
+  # copy the URL
+  adb shell input touchscreen tap 565 280
   sleep 3
   adb shell input keyevent KEYCODE_BACK
   sleep 3
@@ -84,19 +106,22 @@ do
     first_and_last_url_were_matching_only_in_first_iteration="0"
   fi
 
-  adb shell am start -W com.vivaldi.browser/com.google.android.apps.chrome.Main
+  adb shell am start -W ${browser_main_activity}
   sleep 2
   adb shell input touchscreen swipe 550 130 150 130 600
   sleep 15
 done
 
+printf "%s\n" "Done."
+printf "%s%s\n" "The tabs have been saved to: " "${tabs_file_path}"
+
 # TODO test: Remove last duplicate URL
-adb shell cat "${tabs_file_path}" | head -n -1 > "/tmp/tabs.txt"
+#adb shell cat "${tabs_file_path}" | head -n -1 > "/tmp/tabs.txt"
 
 # TODO Insert an empty new line in between each line with link
-adb shell cat "/tmp/tabs.txt" | sed -e 'G' > "/tmp/tabs.txt"
+#adb shell cat "/tmp/tabs.txt" | sed -e 'G' > "/tmp/tabs.txt"
 
-adb push "/tmp/tabs.txt" "${tabs_file_path}"
+#adb push "${tabs_file_path}" "/tmp/tabs.txt"
 
 # README.md
 #Sources
