@@ -85,11 +85,7 @@ do
   sleep 1
   
   tabs_file_path='/sdcard/tabs.txt'
-  first_url="$(adb shell cat "${tabs_file_path}" | head -n 1)"
   last_url="$(adb shell cat "${tabs_file_path}" | tail -n 1)"
-
-  test "${first_url}" = "${last_url}"
-  first_and_last_url_are_matching=$?
 
   forelast_url="$(adb shell cat "${tabs_file_path}" | tail -n 2 | head -n 1)"
   test "${last_url}" != "${forelast_url}"

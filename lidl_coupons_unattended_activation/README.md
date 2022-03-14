@@ -12,6 +12,7 @@
 - https://archlinux.org/packages/extra/x86_64/geeqie/
 - https://duckduckgo.com/?q=imagemagick+crop+image&ia=web
 - https://infoheap.com/crop-image-using-imagemagick-convert/
+- https://askubuntu.com/questions/631689/cropping-images-using-command-line-tools-only#631695
 - https://duckduckgo.com/?q=comparing+two+png+images+linux+terminal&ia=web&iax=qa
 - https://duckduckgo.com/?q=compare+images+identify+linux&ia=web&iax=qa
 - https://imagemagick.org/script/command-line-options.php#metric - chosen metric `AE` - absolute metric - because I wanted a metric that would give me the difference between two pictures as a positive whole number - because of shell script arithmetic limitations, as it doesn't support decimal numbers - not built in support for decimal arithmetic in bash
