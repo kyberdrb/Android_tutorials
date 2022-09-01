@@ -12,6 +12,10 @@ LINK="$1"
 # Pre-conditions
 #   - Vivaldi browser opened at blank tab overview, i.e. without tabs but one [because Vivaldi opens quick launch tab immediately after closing the last tab] - disable 'Show tab list' - then minimize the browser
 
+adb pull "${tabs_file_path}" "/tmp/tabs.txt"
+sed -i '/^$/d' "/tmp/tabs.txt"
+adb push "/tmp/tabs.txt" "${tabs_file_path}"
+
 adb shell am start -W com.vivaldi.browser/com.google.android.apps.chrome.Main
 sleep 3
 

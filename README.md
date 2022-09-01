@@ -31,6 +31,10 @@ Source: Can't write text file to android sd card through mtp protocol - https://
 
         Source: https://android.stackexchange.com/questions/87326/recursive-adb-pull/87327#87327
 
+    - **Backup phone**
+
+            adb pull /storage/sdcard0/. "${HOME}/backup-smartphone/Phone/"
+
 -PC `->` phone
 
     adb push /tmp/buffer.txt /storage/extSdCard/buffer.txt
