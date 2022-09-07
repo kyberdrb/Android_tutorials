@@ -96,13 +96,16 @@ read -r
 printf "%s\n" "Done."
 printf "%s%s\n" "The tabs have been saved to: " "${tabs_file_path}"
 
+# FOR DEBUGGING PURPOSES
+tabs_file_path='/sdcard/tabs.txt'
+
 adb pull "${tabs_file_path}" "/tmp/tabs.txt"
 
 # Remove last duplicate URL
-adb shell cat "${tabs_file_path}" | head -n -1 > "/tmp/tabs.txt"
+head --lines=-1 "/tmp/tabs.txt" > "/tmp/tabs-new.txt"
 
 # Insert an empty new line in between each line with link for easier readability
-adb shell cat "/tmp/tabs.txt" | sed -e 'G' > "/tmp/tabs.txt"
+sed -e 'G' "/tmp/tabs-new.txt" > "/tmp/tabs.txt"
 
 # Push the tabs file back to the phone
 adb push "/tmp/tabs.txt" "${tabs_file_path}"
