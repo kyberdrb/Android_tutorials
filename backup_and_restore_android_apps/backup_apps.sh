@@ -4,7 +4,7 @@ DESTINATION_DIR="$1"
 
 BACKUP_WITH_DATA="$2"
 
-#cd "${DESTINATION_DIR}"
+mkdir --parent "${DESTINATION_DIR}"
 
 adb devices
 
