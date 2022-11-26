@@ -90,8 +90,8 @@ do
   sleep 4
 done
 
-echo "DEBUG: press any key to continue with post-processing"
-read -r
+#echo "DEBUG: press any key to continue with post-processing"
+#read -r
 
 printf "%s\n" "Done."
 printf "%s%s\n" "The tabs have been saved to: " "${tabs_file_path}"
