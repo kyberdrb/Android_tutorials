@@ -1,11 +1,11 @@
-1. prejst uvodnymi nastaveniami Androidu po prvom spusten
-    - google ucet
-    - google assistant - ovladanie hlasom
-    - google pay
-    - pridat odtlacky prstov
-    - nainstalovat programy od vyrobcu
-    - aktivovat ovladanie gestami
-1. Update all apps from google play store
+1. Prejst uvodnymi nastaveniami Androidu po prvom spustení
+    - Google ucet
+    - Google assistant - ovladanie hlasom
+    - Google pay
+    - Pridat odtlacky prstov
+    - \[Voliteľné\] Nainstalovat programy od vyrobcu
+    - Aktivovat ovladanie gestami - viac miesta pre zobrazovanie aplikácii
+1. Update all apps from Google Play Store
 1. Settings
     1. Install all android updates: `Systemupdates` click on `Check for updates`; Download and apply update; Restart when prompted.
     1. Install Google Play updates: About -> Android Version -> Google Play Updates
@@ -68,10 +68,10 @@
         - Disable internet access via mobile internet and Wi-Fi for specific apps to block ads without buying a paid version of the app and to increase privacy.
     1. Accubattery, nastavit také %, aby telefón vydržal celý deň a nevybil sa pod 20%
         - po nainštalovaní vypneme % batérie v `Battery -> Battery percentage` lebo Accubattery ukazuje percentá batérie v ikone v notifikačnej lište
-    1. authenticate banking app - add new device
-    1. authenticate "EU Login Mobile" app for Europass portal - 2-Factor Authentication - add new device
-    1. aunthenticate mobility apps: Bolt, Bike KIA
-    1. authenticate the rest of the apps with login requirement
+    1. Authenticate banking app - add new device
+    1. Authenticate "EU Login Mobile" app for Europass portal - 2-Factor Authentication - add new device
+    1. Aunthenticate mobility apps: Bolt, Bike KIA
+    1. Authenticate the rest of the apps with login requirement
     1. Install a lightweight launcher: Lawnchair/LeanLaunch
         - set it as default launcher in `Apps -> Default apps -> Start-App/Launcher`
     1. Turn off suggested apps: long press on empty space on home screen -> Home settings -> Home screen style -> click on the 'gear' icon next to the `App tray` option -> disable all `Suggested` options
@@ -81,11 +81,13 @@
     1. Uninstall/Disable bloatware
     1. Install an app for running the `TRIM` command e.g. `mFSTRIM`
         - App and explanation: https://forum.xda-developers.com/t/mfstrim-a-real-foss-fstrim-utility-for-android-no-root-necessary.4258765/
+    1. Navigation
+        - Locus - outdoor/trekking navigation
+        - Sygic - road navigation: with detailed crossroad view
+    1. Macrodroid
+        - for customization of the system, e.g. when the charger gets connected or disconnected
     1. Anatomy apps
         - Anatomy: `com.ssstudio.anatomypronoads`
         - Human Anatomy Atlas (2021.2.27): `com.visiblebody.atlas` (source: moddroid: ALL IN ONE apk)
         - Essential Anatomy 3 (v1.1.3): `com.the3d4medical.EssentialAnatomy` (source: apkarchive.com)
-    1. Navigation
-        - Sygic
-        - Locus
 1. nastavit cierne pozadie obrazovky a zamku obrazovky - setrenie baterie
