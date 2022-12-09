@@ -61,12 +61,14 @@
         - Bez aktivácie Developer options cez zjednodušenie prístupu: Accessibility -> Text and Appearance -> Disable/Remove animations
         - Developer options -> Drawing, vypnúť/nastaviť a 0 položky Window animation scale, Transition animation scale a Animation duration scale
     1. Ak DNS resolvuje pomaly alebo občas vôbec: enter "private dns" in the settings search bar -> enter without quotes "dns.google"
+    1. nastavit cierne pozadie obrazovky a zamku obrazovky - setrenie baterie
+    1. zvysit citlivost obrazovky, aby reagovala na dotyk cez rukavicu: Display -> Increase touch sensitivity
 1. Apps
     1. Restore SMS and call history with `SMS Backup & Restore`
     1. Install firewall app - e.g. `Netguard` - to block internet access to block ads in apps that we don't mind to be offline
         - At first, it failed: I couldn't enable firewall because another app had already used the VPN connection. I hadn't found out, which one it was. After a week or two, I installed Netguard again, enabled it, and it finally enables without any error messages.
         - Disable internet access via mobile internet and Wi-Fi for specific apps to block ads without buying a paid version of the app and to increase privacy.
-    1. Accubattery, nastavit také %, aby telefón vydržal celý deň a nevybil sa pod 20%
+    1. `Accubattery`, nastavit také %, aby telefón vydržal celý deň a nevybil sa pod 20%
         - po nainštalovaní vypneme % batérie v `Battery -> Battery percentage` lebo Accubattery ukazuje percentá batérie v ikone v notifikačnej lište
     1. Authenticate banking app - add new device
     1. Authenticate "EU Login Mobile" app for Europass portal - 2-Factor Authentication - add new device
@@ -78,7 +80,6 @@
     1. Set custom WhatsApp sound: three dots -> Settings -> Notifications
         - Chat sound: Pixie Dust
         - Group Chat sound: Pixie Dust
-    1. Uninstall/Disable bloatware
     1. Install an app for running the `TRIM` command e.g. `mFSTRIM`
         - App and explanation: https://forum.xda-developers.com/t/mfstrim-a-real-foss-fstrim-utility-for-android-no-root-necessary.4258765/
     1. Navigation
@@ -86,8 +87,26 @@
         - Sygic - road navigation: with detailed crossroad view
     1. Macrodroid
         - for customization of the system, e.g. when the charger gets connected or disconnected
+        - pridat don skripty pre vlastne zvuky pripojenia a odpojenie nabijacky a sledovanie nabitia baterie podobne ako AccuBattery (len sa mi nepacia tie zvuky, tak som ich vypol pre nabijanie v systeme a pre AccuBattery som nechal iba notifikacie s vibraciou bez zvuku)
+        - Set Macrodroid Macro notification sound for regular and high priority notifications to Silent to enable the usage of custom notification sounds and custom vibrations for each notification in each macro: Apps -> Macrodroid -> Notifications -> Notification action/Benachrichtigungsaktion -> Standard; Sound: None; Vibrations: enabled
+            - to accompany the notification with a sound, place the action `Media -> Play/Pause media` after each `Show notification` action
+            - for notification vibration, add the action `Device actions -> Vibrate`
+        - aktivovat MacroDroid notifikacie aj pri v rezime Nerusit: TODO DOPLNIT KROKY
     1. Anatomy apps
         - Anatomy: `com.ssstudio.anatomypronoads`
         - Human Anatomy Atlas (2021.2.27): `com.visiblebody.atlas` (source: moddroid: ALL IN ONE apk)
         - Essential Anatomy 3 (v1.1.3): `com.the3d4medical.EssentialAnatomy` (source: apkarchive.com)
-1. nastavit cierne pozadie obrazovky a zamku obrazovky - setrenie baterie
+    1. - turistika
+        - **Locus Maps**
+        - maps.me
+        - peak finder
+    1. Uninstall/Disable bloatware
+        - Deactivate app `Dolby Atmos` - prevention against sound cracking and popping, assuring premium sound quality
+    1. mute Moto Notes notifications for removed stylus: Notifications -> App settings -> Moto Notes -> Stylus gone/away: Silent + enable Minimize
+    1. nastavit Unpotimized/Untestricted battery mode pre AccuBattery, MacroDroid, Google Fit, Clock (aby budiky zvonili a zvonili nahlas), Gmail, SMS Backup & Restore (aby notifikacie chodili a appky robili pravidelne planovane nacasovane zalohy), Screen Off & Lock, chatovacie appky: WhatsApp, Signal, Viber?, Messenger? lebo pri rezime uspory energie tieto appky killuje
+    1. AccuBattery notification sound by setting Sound to luXury and Vibrations set to enabled
+
+- pridat zalohovanie MacroDroid scriptov do IBS
+- vytvorit samostatny adresar v dcim "Turistika", presunut don vsetky fotky zo 100ANDRO ktore su pritomne v gpx exprtovanom subore pre body; a nakoniec obnovit fotky pre vsetky body v locus maps podla samsungu a jeho gpx exportu otvoreneho v vscodium na laptope
+    - DSC_0555-614.JPG
+- nastavit odtlacky prstov
