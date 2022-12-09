@@ -70,6 +70,7 @@
         - Disable internet access via mobile internet and Wi-Fi for specific apps to block ads without buying a paid version of the app and to increase privacy.
     1. `Accubattery`, nastavit také %, aby telefón vydržal celý deň a nevybil sa pod 20%
         - po nainštalovaní vypneme % batérie v `Battery -> Battery percentage` lebo Accubattery ukazuje percentá batérie v ikone v notifikačnej lište
+        - AccuBattery notification sound by setting Sound to luXury and Vibrations set to enabled
     1. Authenticate banking app - add new device
     1. Authenticate "EU Login Mobile" app for Europass portal - 2-Factor Authentication - add new device
     1. Aunthenticate mobility apps: Bolt, Bike KIA
@@ -104,9 +105,3 @@
         - Deactivate app `Dolby Atmos` - prevention against sound cracking and popping, assuring premium sound quality
     1. mute Moto Notes notifications for removed stylus: Notifications -> App settings -> Moto Notes -> Stylus gone/away: Silent + enable Minimize
     1. nastavit Unpotimized/Untestricted battery mode pre AccuBattery, MacroDroid, Google Fit, Clock (aby budiky zvonili a zvonili nahlas), Gmail, SMS Backup & Restore (aby notifikacie chodili a appky robili pravidelne planovane nacasovane zalohy), Screen Off & Lock, chatovacie appky: WhatsApp, Signal, Viber?, Messenger? lebo pri rezime uspory energie tieto appky killuje
-    1. AccuBattery notification sound by setting Sound to luXury and Vibrations set to enabled
-
-- pridat zalohovanie MacroDroid scriptov do IBS
-- vytvorit samostatny adresar v dcim "Turistika", presunut don vsetky fotky zo 100ANDRO ktore su pritomne v gpx exprtovanom subore pre body; a nakoniec obnovit fotky pre vsetky body v locus maps podla samsungu a jeho gpx exportu otvoreneho v vscodium na laptope
-    - DSC_0555-614.JPG
-- nastavit odtlacky prstov
