@@ -3,7 +3,7 @@
     - Google assistant - ovladanie hlasom
     - Google pay
     - Pridat odtlacky prstov
-    - \[Voliteľné\] Nainstalovat programy od vyrobcu
+    - \[Voliteľné\] Nainstalovat programy od vyrobcu - a potom ich odinštalovať, keď nefungujú stabilne alebo žerú baterku
     - Aktivovat ovladanie gestami - viac miesta pre zobrazovanie aplikácii
 1. Update all apps from Google Play Store
 1. Settings
@@ -50,6 +50,9 @@
             - Settings: disable `Animated background`
     1. Privacy/Datenschutz
         - Enable location history as a help at searching for the phone when it gets lost: Google Location history/Google-Standortverlauf -> Activate
+            - https://duckduckgo.com/?q=google+location+history&ia=web
+            - https://support.google.com/accounts/answer/3118687?hl=en
+            - https://myaccount.google.com/activitycontrols/location
     1. System
         - Fix time on folio display, i.e. make it fit to one line for the Folio case cutout area - this happens when all four numbers in time are non-ones i.e. `0` or `2-9`. Go to `Date & Time`:
             - `Use standard format for chosen language`: disabled
@@ -61,6 +64,7 @@
         - Bez aktivácie Developer options cez zjednodušenie prístupu: Accessibility -> Text and Appearance -> Disable/Remove animations
         - Developer options -> Drawing, vypnúť/nastaviť a 0 položky Window animation scale, Transition animation scale a Animation duration scale
     1. Ak DNS resolvuje pomaly alebo občas vôbec: enter "private dns" in the settings search bar -> enter without quotes "dns.google"
+        - https://developers.google.com/speed/public-dns/docs/using
     1. nastavit cierne pozadie obrazovky a zamku obrazovky - setrenie baterie
     1. zvysit citlivost obrazovky, aby reagovala na dotyk cez rukavicu: Display -> Increase touch sensitivity
 1. Apps
@@ -88,10 +92,20 @@
         - Sygic - road navigation: with detailed crossroad view
     1. Macrodroid
         - for customization of the system, e.g. when the charger gets connected or disconnected
-        - pridat don skripty pre vlastne zvuky pripojenia a odpojenie nabijacky a sledovanie nabitia baterie podobne ako AccuBattery (len sa mi nepacia tie zvuky, tak som ich vypol pre nabijanie v systeme a pre AccuBattery som nechal iba notifikacie s vibraciou bez zvuku)
+        - pridat don skripty pre
+            - vlastne zvuky pripojenia a odpojenie nabijacky so sledovanim nabitia baterie s notifikaciou na odpojenie nabijacky na predlzenie zivotnosti a spomalenie degradacie kapacity baterie podobne ako AccuBattery (len sa mi nepacia tie zvuky, tak som ich vypol pre nabijanie v systeme a pre AccuBattery som nechal iba notifikacie s vibraciou bez zvuku)
+                - https://duckduckgo.com/?q=macrodroid+charging+limit+doesn%27t+work&ia=web
+                - https://android.stackexchange.com/questions/206369/macrodroid-i-want-a-repeating-alert-when-battery-is-less-than-over-than-x
+            - shake to flashlight with notification
+                - Settings (in lower right corner) -> Trigger options (Auslöseroptionen) -> Shake trigger (Schüttel-Auslöser) -> Shake sensitivity (Schüttelempfindlichkeit) adjusted to level `1 - Minimum` to trigger the flashlight only by really strong shaking move.
         - Set Macrodroid Macro notification sound for regular and high priority notifications to Silent to enable the usage of custom notification sounds and custom vibrations for each notification in each macro: Apps -> Macrodroid -> Notifications -> Notification action/Benachrichtigungsaktion -> Standard; Sound: None; Vibrations: enabled
             - to accompany the notification with a sound, place the action `Media -> Play/Pause media` after each `Show notification` action
             - for notification vibration, add the action `Device actions -> Vibrate`
+            - Sources
+                - https://duckduckgo.com/?q=android+silent+notifications&ia=web
+                - https://android.gadgethacks.com/how-to/silence-notifications-from-individual-apps-your-android-phone-0210059/
+                - https://duckduckgo.com/?q=android+notification+channel&ia=web
+                - https://www.howtogeek.com/715614/what-are-android-notification-channels/
         - aktivovat MacroDroid notifikacie aj pri v rezime Nerusit: TODO DOPLNIT KROKY
     1. Anatomy apps
         - Anatomy: `com.ssstudio.anatomypronoads`
@@ -102,6 +116,75 @@
         - maps.me
         - peak finder
     1. Uninstall/Disable bloatware
-        - Deactivate app `Dolby Atmos` - prevention against sound cracking and popping, assuring premium sound quality
+        - basically almost all non-system apps by the device vendor (Motorola, Samsung, Xiaomi, etc.) and other non-vital apps
     1. mute Moto Notes notifications for removed stylus: Notifications -> App settings -> Moto Notes -> Stylus gone/away: Silent + enable Minimize
     1. nastavit Unpotimized/Untestricted battery mode pre AccuBattery, MacroDroid, Google Fit, Clock (aby budiky zvonili a zvonili nahlas), Gmail, SMS Backup & Restore (aby notifikacie chodili a appky robili pravidelne planovane nacasovane zalohy), Screen Off & Lock, chatovacie appky: WhatsApp, Signal, Viber?, Messenger? lebo pri rezime uspory energie tieto appky killuje
+    1. Google Fit
+        - Update daily target/limit/goal: Go to `Profile` fill out the fields and go further to `Settings` and adjust the goal values.
+        - https://support.google.com/fit/answer/6075110?hl=en&co=GENIE.Platform%3DAndroid
+    1. Google Keyboard
+        - When needed, enable one-handed-mode by long-pressing the comma key `,`
+        - https://duckduckgo.com/?q=one+handed+mode+google+keyboard&ia=web
+        - https://www.howtogeek.com/253432/how-to-enable-one-handed-mode-in-androids-google-keyboard/
+
+- Android - General
+    - How to change the system font style to a custom one, for example to a monospaced font?
+
+    - Compatible USB Type-C adapter to 3.5mm audio jack?
+
+    - MacroDroid - further scripts
+        - Play sound when switching to mobile data
+            - https://duckduckgo.com/?q=macrodroid+mobile+data
+            - https://duckduckgo.com/?q=macrodroid+mobile+data+adb&ia=web
+            - https://www.reddit.com/r/macrodroid/comments/ucln0l/mobile_data_toggle_does_not_work_despite_adb_hack/
+                - `adb shell pm grant com.arlosoft.macrodroid android.permission.WRITE_SECURE_SETTINGS`
+        - Blink flashlight on incoming call
+        - Make screenshot with delay via persistent notification
+
+    - Custom app development
+        - Disable/hide notification panel/status bar on lock screen
+            - https://duckduckgo.com/?q=lock+disable+notification+panel+control+on+lock+screen&ia=web
+            - https://forum.xda-developers.com/t/how-to-disable-drop-down-notification-panel-on-lockscreen.3910909/
+                - on Samsung devices enable `Lock network and security` in `Settings -> Lock Screen -> Secure lock settings`
+                - on stock Android only allows only hiding the notifications (`Settings -> Display -> Lockscreen -> Data protection: No notifications`), but the control panel is still available and accessible
+            - https://forum.xda-developers.com/t/how-to-disable-access-to-the-notification-bar-while-in-the-lock-screen.3838611/
+            - https://duckduckgo.com/?q=hide+remove+disable+notification+status+bar+android&ia=web
+            - https://stackoverflow.com/questions/34581565/android-hide-disable-notification-status-bar
+                - app with `android.permission.SYSTEM_ALERT_WINDOW` and overriden `onInterceptTouchEvent` on custom ViewGroup
+            - https://forum.xda-developers.com/t/guide-no-root-required-hide-the-status-bar-or-nav-bar-with-adb.3654807/
+                - hide status bar: `adb shell settings put global policy_control immersive.status=*`
+                - show status bar: `adb shell settings put global policy_control null*`
+            - https://stackoverflow.com/questions/4222713/hide-notification-bar
+                - https://stackoverflow.com/questions/4222713/hide-notification-bar/19902500#19902500
+        - Protect power menu with authentication
+            - https://duckduckgo.com/?q=android+require+verification+before+shutdown&ia=web
+            - https://support.google.com/work/android/thread/94860452/how-do-i-set-up-a-password-when-switching-off-my-android-phone-to-avoid-theft?hl=en
+            - https://www.quora.com/How-do-I-set-up-a-password-when-switching-off-my-android-phone-to-avoid-theft?share=1
+            - **Smart Lockscreen Protector** didn't protected the notification/status bar from being pulled down and enable/disable settings via quick shortcuts, like enabling airplane mode, disabling wifi, mobile data, bluetooth etc.
+            - https://stackoverflow.com/questions/11907205/password-required-to-power-off-android-device
+                - `android.intent.action.SHUTDOWN`
+            - https://duckduckgo.com/?q=android.intent.action.SHUTDOWN&ia=web
+            - https://stackoverflow.com/questions/34102139/how-to-make-action-shutdown-intent-work-when-app-is-closed-in-android
+                - `android.permission.DEVICE_POWER`
+                - `android.intent.action.ACTION_SHUTDOWN`
+            - https://www.demo2s.com/android/android-intent-action-shutdown.html
+            - https://duckduckgo.com/?q=difference+action_reboot+action_shutdown&ia=web
+            - https://stackoverflow.com/questions/17917858/difference-between-intent-action-reboot-and-intent-action-shutdown
+            - https://developer.android.com/reference/android/content/Intent.html#ACTION_SHUTDOWN
+            - https://developer.android.com/reference/android/content/Intent#ACTION_REBOOT
+
+- Motorola Edge 30 Pro with Android 12 - device specific tweaks and workarounds:
+    - Fix randomly occurring 1-2 minutes durating audio crackling: noisy and distorted sound (then the sound plays well)
+        1. Disable app `Dolby Atmos` - prevention against sound cracking and popping, assuring premium sound quality
+        1. Terminate app `Dolby` - created an automation script with Macrodroid that terminates the app after each startup
+        1. Install third-party equalizer app - I'm using `Flat Equalizer - Bass Booster` with blocked internet access by `NetGuard` and all flat preset with all sliders set to `-4.0`. I'm assuming that the phone/system/speakers have difficulties normalizing/equalizing by default overexposed audio. No crackling occured after playing music for two hours.
+    
+    - Fix for getting stuck on the Peek Display
+        - vypnut peek display, lebo raz mi telefon vobec nesiel odblokovat a zostal zaseknuty na peek displayi. ani na tlacidlo zapinania nereagoval, aby som hi restartoval. zachranil ma az folio display, kde zapinacie tlacidlo otvorilo ponuku a cez folio kryt so telefom restartoval. potom telefon nabehol v pohode. asi zblbol preto, lebo uz mal iny obal nez folio.
+
+    - Is there any way to customize the Folio display? The clock sometimes takes two rows on the Folio display instead of one and overlaps the edge of the folio cutout when closed, because it doesn't fit the Folio display area when the Folio cover is closed.
+        - Workaround for clock on the Folio display: disable the `Automatic time format` and `24-hour format`
+
+    - poexperimentovat s nastaveniami always on displeja s appkou Always On: Edge Music Lightning
+        - bez zmeny na Folio displeji
+        - The Folio display can be used as is without any customizations. Either use it as is or turn it off.
