@@ -173,6 +173,50 @@
             - https://developer.android.com/reference/android/content/Intent.html#ACTION_SHUTDOWN
             - https://developer.android.com/reference/android/content/Intent#ACTION_REBOOT
 
+- Settings screenshots
+
+    ![](img/Screenshot_20230101-112922.png)
+    ![](img/Screenshot_20221226-100250.png)
+
+    ![](img/Screenshot_20221217-190211.png)
+
+    ![](img/Screenshot_20221217-185930.png)
+
+    ---
+
+    ![](img/Screenshot_20221213-004530.png)
+    ![](img/Screenshot_20221213-004542.png)
+
+    ---
+
+    ![](img/Screenshot_20221211-111720.png)
+    ![](img/Screenshot_20221211-111733.png)
+
+    ---
+
+    ![](img/Screenshot_20221210-104727.png)
+    ![](img/Screenshot_20221210-104904.png)
+
+    ---
+
+    ![](img/Screenshot_20221209-073456.png)
+
+    ---
+
+    ![](img/Screenshot_20221208-070747.png)
+    ![](img/Screenshot_20221208-070755.png)
+    ![](img/Screenshot_20221204-115901.png)
+    ![](img/Screenshot_20221204-115853.png)
+    ![](img/Screenshot_20221203-133548.png)
+
+    ---
+
+    ![](img/Screenshot_20221203-000047.png)
+    ![](img/Screenshot_20221203-000057.png)
+    ![](img/Screenshot_20221203-000035.png)
+
+    ---
+
 - Motorola Edge 30 Pro with Android 12 - device specific tweaks and workarounds:
     - Fix randomly occurring 1-2 minutes durating audio crackling: noisy and distorted sound (then the sound plays well)
         1. Disable app `Dolby Atmos` - prevention against sound cracking and popping, assuring premium sound quality
