@@ -45,9 +45,10 @@
             - Lockscreen text: <emailova.adresa@provider.domena>
                 - in case of loss
             - hide the wallet icon by disabling
-        - Night light: always enabled with approx. 50% intensity
+        - Night light: always enabled with approx. 50% intensity, or adjust it to your liking
         - Enable Vorschaudisplay/Always-On-Display to check time and battery charge without pressing the power button when the phone is locked to reduce the usage of hardware
             - Settings: disable `Animated background`
+        - Prevent flickering: Enabled
     1. Privacy/Datenschutz
         - Enable location history as a help at searching for the phone when it gets lost: Google Location history/Google-Standortverlauf -> Activate
             - https://duckduckgo.com/?q=google+location+history&ia=web
@@ -126,6 +127,9 @@
         - When needed, enable one-handed-mode by long-pressing the comma key `,`
         - https://duckduckgo.com/?q=one+handed+mode+google+keyboard&ia=web
         - https://www.howtogeek.com/253432/how-to-enable-one-handed-mode-in-androids-google-keyboard/
+    1. Adjust notification settings for the `Google` app
+
+        ![](img/Screenshot_20221117-220919.png)
 
 - Android - General
     - How to change the system font style to a custom one, for example to a monospaced font?
@@ -205,8 +209,14 @@
 
     ![](img/Screenshot_20221208-070747.png)
     ![](img/Screenshot_20221208-070755.png)
+
+    ---
+
     ![](img/Screenshot_20221204-115901.png)
     ![](img/Screenshot_20221204-115853.png)
+
+    ---
+    
     ![](img/Screenshot_20221203-133548.png)
 
     ---
@@ -219,15 +229,21 @@
 
 - Motorola Edge 30 Pro with Android 12 - device specific tweaks and workarounds:
     - Fix randomly occurring 1-2 minutes durating audio crackling: noisy and distorted sound (then the sound plays well)
-        1. Disable app `Dolby Atmos` - prevention against sound cracking and popping, assuring premium sound quality
-        1. Terminate app `Dolby` - created an automation script with Macrodroid that terminates the app after each startup
-        1. Install third-party equalizer app - I'm using `Flat Equalizer - Bass Booster` with blocked internet access by `NetGuard` and all flat preset with all sliders set to `-4.0`. I'm assuming that the phone/system/speakers have difficulties normalizing/equalizing by default overexposed audio. No crackling occured after playing music for two hours.
-    
+        - After further investigation I noticed, that this audio distortions are related only to mobile and desktop versions of the Soundcloud webpage. **The solution was to stop using the Soundcloud webpages and play music from the dedicated Soundcloud app.**    
+
     - Fix for getting stuck on the Peek Display
         - vypnut peek display, lebo raz mi telefon vobec nesiel odblokovat a zostal zaseknuty na peek displayi. ani na tlacidlo zapinania nereagoval, aby som hi restartoval. zachranil ma az folio display, kde zapinacie tlacidlo otvorilo ponuku a cez folio kryt so telefom restartoval. potom telefon nabehol v pohode. asi zblbol preto, lebo uz mal iny obal nez folio.
 
     - Is there any way to customize the Folio display? The clock sometimes takes two rows on the Folio display instead of one and overlaps the edge of the folio cutout when closed, because it doesn't fit the Folio display area when the Folio cover is closed.
         - Workaround for clock on the Folio display: disable the `Automatic time format` and `24-hour format`
+
+            Change this:
+            
+            ![](img/Screenshot_20221120-145703.png)
+
+            To this:
+
+            ![](img/Screenshot_20221120-144617.png)
 
     - poexperimentovat s nastaveniami always on displeja s appkou Always On: Edge Music Lightning
         - bez zmeny na Folio displeji
