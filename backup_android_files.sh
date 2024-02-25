@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 adb devices | tail --lines=+2 | head --lines=1
 
 echo "Backing up apps"
@@ -56,4 +58,6 @@ echo "Check archives password and content"
 echo ""
 7z l "$(find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -type f -name "Phone-complete.7z*" | sort | head --lines=1)"
 7z l "$(find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -type f -name "apps.7z*" | head --lines=1)"
+
+set +x
 
