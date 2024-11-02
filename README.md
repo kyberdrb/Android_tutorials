@@ -2,6 +2,34 @@
 
 Tutorials for Android
 
+## Connect phone via wireless ADB connection
+
+1. Phone: Enable Dev Options
+1. Phone: Enable Wireless ADB
+1. Phone: Open Wireless ADB
+1. Phone: Click on Pair via Code
+1. PC: Install adb tools, open terminal and pair with the phone with command
+
+    ```
+    adb pair 192.168.60.252:43061
+    ```
+
+    where the values are matching the values displayed in the pairing prompt on the phone.
+
+    When prompted, enter the pairing code to the terminal and press Enter.
+
+1. Phone: close the pairing prompt and check the connection in option IP address & Port
+1. PC: use the connection from the phone to establish wireless connection
+
+    ```
+    adb connect 192.168.60.252:40677
+    ```
+
+### Sources
+
+- https://www.youtube.com/results?search_query=adb+wireless
+- https://www.youtube.com/watch?v=_JjpbufTMew
+
 ## Copy file between the phone and the computer
 
 Limitations of MTP storage - can't modify files in place - in the MTP storage directly  
