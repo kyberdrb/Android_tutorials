@@ -3,20 +3,23 @@
 set -x
 
 PASSWORD="${1}"
-PASSWORD="$1"
 
 IP_ADDRESS="${2}"
 #IP_ADDRESS="192.168.60.252"
+
 PORT_CONNECT="${3}"
 #PORT_CONNECT="40677"
-PORT_PAIR="43061"
+
+PORT_PAIR="${4}"
+#PORT_PAIR="43061"
 
 # TODO establish wireless ADB connection between phone and PC
 #adb pair ${IP_ADDRESS}:${PORT_PAIR}
+
 adb connect ${IP_ADDRESS}:${PORT_CONNECT}
 
 echo "Checking wireless ADB connection..."
-#read
+read
 
 ANDROID_DEVICE="$(adb devices | tail --lines=+2 | head --lines=1)"
 if [ -z ${ANDROID_DEVICE} ]
@@ -24,6 +27,8 @@ then
     echo "No Android device found. Please, connect an Android device via USB cable or via wireless/Wi-Fi ADB connection"
     exit 1
 fi
+
+echo "ADB connection established."
 
 echo "Backing up apps"
 echo ""
@@ -42,7 +47,7 @@ mkdir --parents "${HOME}/backup-moto_edge_30_pro/files/"
 echo "Downloading files only from the phone's root dir via ADB..."
 #read
 
-date && time adb shell "find /sdcard/ -maxdepth 1 -type f" | grep --invert-match "^Android$" | sort | xargs -d $'\n' sh -c 'for arg do echo "Backing up "$arg""; adb pull "$arg" "${HOME}/backup-moto_edge_30_pro/files/";  echo ""; done' _ && date
+date && time adb shell "find /sdcard/ -maxdepth 1 -type f" | grep --invert-match "^Android$" | sort | xargs -d $'\n' sh -c 'for arg do echo "Backing up "$arg""; adb pull "$arg" "${HOME}/backup-moto_edge_30_pro/files/"; adb pull "$arg" "${HOME}/backup-moto_edge_30_pro/Phone-complete/";  echo ""; done' _ && date
 
 echo "Done downloading files only from the phone's root dir via ADB..."
 #read
@@ -56,6 +61,7 @@ Download files via FTP server and (phone's hotspot - for highest speed) Wi-Fi ne
 OR
 
 Generate file list via remote ADB connection and download them one-by-one or parallely via xargs and curl
+EOF
 
 date
 adb shell "find /sdcard/ -maxdepth 1 -mindepth 1 -type d" | grep --invert-match "Android$" | sort | \
@@ -69,13 +75,10 @@ xargs -d $'\n' sh -c '
     done
 ' _
 date
-EOF
 
 echo "Waiting for all chosen phone's files to be backed up. Press any key to proceed or Ctrl+C to abort."
 
 read
-
-PASSWORD="${1}"
 
 echo "Delete previous archive(s) and checksum file"
 find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -name "apps.*" -exec gio trash {} \;
