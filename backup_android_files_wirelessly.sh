@@ -13,6 +13,9 @@ PORT_CONNECT="${3}"
 PORT_PAIR="${4}"
 #PORT_PAIR="43061"
 
+adb kill-server
+adb start-server
+
 # TODO establish wireless ADB connection between phone and PC
 #adb pair ${IP_ADDRESS}:${PORT_PAIR}
 
