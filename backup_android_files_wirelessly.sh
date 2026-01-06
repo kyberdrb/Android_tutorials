@@ -16,7 +16,7 @@ PORT_PAIR="${4}"
 adb kill-server
 adb start-server
 
-# TODO establish wireless ADB connection between phone and PC
+# TODO trigger establishing wireless ADB connection between phone and PC by an option '-a'/'--pair'
 #adb pair ${IP_ADDRESS}:${PORT_PAIR}
 
 adb connect ${IP_ADDRESS}:${PORT_CONNECT}
@@ -47,6 +47,9 @@ echo ""
 gio trash "${HOME}/backup-moto_edge_30_pro/files/"
 mkdir --parents "${HOME}/backup-moto_edge_30_pro/files/"
  
+#gio trash "${HOME}/backup-moto_edge_30_pro/Phone-complete/"
+mkdir --parents "${HOME}/backup-moto_edge_30_pro/Phone-complete/"
+
 echo "Downloading files only from the phone's root dir via ADB..."
 #read
 
@@ -54,9 +57,6 @@ date && time adb shell "find /sdcard/ -maxdepth 1 -type f" | grep --invert-match
 
 echo "Done downloading files only from the phone's root dir via ADB..."
 #read
-
-#gio trash "${HOME}/backup-moto_edge_30_pro/Phone-complete/"
-mkdir --parents "${HOME}/backup-moto_edge_30_pro/Phone-complete/"
 
 cat << EOF
 Download files via FTP server and (phone's hotspot - for highest speed) Wi-Fi network and via Filezilla on the PC side (for convenience)
@@ -152,9 +152,9 @@ sha256sum --check "${HOME}/backup-moto_edge_30_pro/Phone-complete.7z.sha256sums"
 
 echo "Check archives password and content"
 echo ""
-7z l "$(find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -type f -name "Phone-complete.7z*" | sort | head --lines=1)"
-7z l "$(find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -type f -name "files.7z*" | head --lines=1)"
-7z l "$(find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -type f -name "apps.7z*" | head --lines=1)"
+echo "7z l "$(find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -type f -name "Phone-complete.7z*" | sort | head --lines=1)""
+echo "7z l "$(find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -type f -name "files.7z*" | head --lines=1)""
+echo "7z l "$(find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -type f -name "apps.7z*" | head --lines=1)""
 
 set +x
 
