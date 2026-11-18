@@ -17,12 +17,12 @@ adb kill-server
 adb start-server
 
 # TODO trigger establishing wireless ADB connection between phone and PC by an option '-a'/'--pair'
-#adb pair ${IP_ADDRESS}:${PORT_PAIR}
+adb pair ${IP_ADDRESS}:${PORT_PAIR}
 
 adb connect ${IP_ADDRESS}:${PORT_CONNECT}
 
 echo "Checking wireless ADB connection..."
-read
+#read
 
 ANDROID_DEVICE="$(adb devices | tail --lines=+2 | head --lines=1)"
 if [ -z ${ANDROID_DEVICE} ]
@@ -81,13 +81,13 @@ date
 
 echo "Waiting for all chosen phone's files to be backed up. Press any key to proceed or Ctrl+C to abort."
 
-read
+#read
 
 echo "Delete previous archive(s) and checksum file"
 find "${HOME}/backup-moto_edge_30_pro/" -maxdepth 1 -name "apps.*" -exec gio trash {} \;
 
 echo "Compress apps directory"
-read
+#read
 
 echo ""
 date && time 7z a -t7z -mx=9 -ms=on -mf=on -mhc=on -mhe=on -m0=lzma2 -mfb=273 -md=64m -v4g "-p${PASSWORD}" "${HOME}/backup-moto_edge_30_pro/apps.7z" "${HOME}/backup-moto_edge_30_pro/apps/" && date
